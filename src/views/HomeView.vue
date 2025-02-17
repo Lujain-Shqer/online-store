@@ -80,18 +80,26 @@ export default {
   position: relative;
 }
 .homePage .header button {
-  padding: 5px 20px;
   position: absolute;
   bottom: 20px;
   left: 10px;
   background: #fff;
-  color: #000;  font-weight: 900;
+  color: #000;
+  border: 0;
+  padding: 10px;
+  font-weight: 900;
   border-radius: 0;
-  letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5vh;
+  cursor: pointer;
+  border-bottom: 4px solid #242424;
+    border-right: 4px solid #242424;
+    transform: translate(9px, 2px);
+  
 
 }
 .homePage .head {
-  background-image: url("@/assets/images/Untitled-1.jpg");
+  background-image: url("@/assets/images/Collection.jpg");
   background-size: cover;
   height: 100vh;
 }

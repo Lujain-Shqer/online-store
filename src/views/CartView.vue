@@ -4,15 +4,15 @@
       v-model:active="isLoading"
       :can-cancel="true"
       :is-full-page="false"
-      color="#ff8500"
+      color="#000"
       loader="bars"
       background-color="#000"
       :lock-scroll="false"
     />
-    <div class="background"></div>
     <div class="container">
+      <button class="btn" @click="deleteCart()">Delete</button>
       <div class="row" v-if="carts.length > 0">
-        <div class="col-xl-8 table-cart">
+        <div class="col-xl-12 table-cart">
           <table>
             <thead>
               <tr>
@@ -37,8 +37,8 @@
           </table>
         </div>
       </div>
-      <p v-else class="no-data">
-        {{ lang == "ar" ? "لا يوجد بيانات" : "There is no data" }}
+      <p v-else class="nodata">
+        There is no Data
       </p>
     </div>
   </div>
@@ -103,6 +103,7 @@ export default {
         .then((response) => response.json())
         .then(() => {
           alert('The Cart Deleted.');
+          this.$router.push({ name: 'HomeView' });
         })
         .catch((error) => {
           console.error(error);
@@ -146,6 +147,8 @@ export default {
 /* Background */
 .cart {
   background: #eeeee4;
+  padding: 3vh 0;
+  position: relative;
 }
 .cart .background {
   height: 10vh;
@@ -155,11 +158,29 @@ export default {
   margin-top: 2rem;
   padding-bottom: 2rem;
 }
+.cart .container button{
+position: absolute;
+top: 30px;
+right: 25%;
+background: #000;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    font-weight: 900;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5vh;
+    cursor: pointer;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    transform: translate(9px, 2px);
+}
 
 /* Table */
 .cart .table-cart {
   background: #000003;
   border-radius: 8px;
+  margin-top: 5vh;
 }
 
 .cart table {
@@ -232,6 +253,8 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 100px;
+  margin: auto
 }
 
 .cart table .quantity .counter i {

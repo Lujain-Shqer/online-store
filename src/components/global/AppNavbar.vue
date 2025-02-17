@@ -27,13 +27,13 @@
             <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="#" class="nav-link">About Us</router-link>
+            <router-link to="/AboutUs" class="nav-link">About Us</router-link>
           </li>
           <li class="nav-item">
             <router-link to="#" class="nav-link">Media Center</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="#" class="nav-link">Contact Us</router-link>
+            <router-link to="/ConnectUs" class="nav-link">Contact Us</router-link>
           </li>
         </ul>
 
@@ -92,9 +92,9 @@
         </div>
         <!-- Icons -->
         <div class="d-flex me-2">
-          <img src="@/assets/images/icon3.png" alt="Icon 1" class="icon" />
-          <img src="@/assets/images/icon2.png" alt="Icon 2" class="icon" />
-          <img src="@/assets/images/icon1.png" alt="Icon 3" class="icon" />
+          <img src="@/assets/icons/icon3.png" alt="Icon 1" class="icon" />
+          <img src="@/assets/icons/icon2.png" alt="Icon 2" class="icon" />
+         <router-link to="/CartView"> <img src="@/assets/icons/icon1.png" alt="Icon 3" class="icon" /></router-link>
         </div>
       </div>
     </div>

@@ -155,7 +155,9 @@ export default {
 </script>
 
 <style>
-
+.product{
+  padding: 3rem 0;
+}
 /* Images */
 
 .product img{
@@ -181,9 +183,7 @@ export default {
   font-weight: bold;
   margin-right: 1rem;
 }
-.product .content .prices .offer-price{
-  color: #FFF;
-}
+
 .product .content  h4 {
   color: #000000;
   font-size: 20px;
@@ -212,6 +212,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .product .content .selections .quantity .details .counter i {
   border: 2px solid #747474;
